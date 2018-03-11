@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { graphql } from 'react-apollo';
 
-const Header = () => {
-  return (
-    <header>
-      header
-    </header>
-  );
-};
+import query from '../queries/currentUser';
 
-export default Header;
+class Header extends Component {
+  render() {
+    return (
+      <header>
+        header
+      </header>
+    );
+  }
+}
+
+export default graphql(query)(Header);
