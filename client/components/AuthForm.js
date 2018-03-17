@@ -15,18 +15,20 @@ class AuthForm extends Component {
       <div className="row">
         <form className="col s4">
           <div className="input-field">
-            <label>Email</label>
+            <label htmlFor="email" className="active">Email</label>
+
             <input
-              placeholder=""
+              id="email"
               value={this.state.email}
               onChange={e => this.setState({ email: e.target.value })}
             />
           </div>
 
           <div className="input-field">
-            <label>Password</label>
+            <label htmlFor="password" className="active">Password</label>
 
             <input
+              id="password"
               value={this.state.password}
               onChange={e => this.setState({ password: e.target.value })}
             />
